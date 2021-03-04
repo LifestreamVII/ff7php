@@ -1,0 +1,123 @@
+body{
+    background-image: url("bg1_pc.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.optbox{
+    position: relative;
+    margin-top: 13%;
+    height: 637px;
+    width: 764px;
+    background-image: url("optboxbg.png");
+    background-repeat: no-repeat;
+    left: 4%;
+    background-size: contain;
+}
+
+.optbox > h2{
+    top: 11.5%;
+    left: 2%;
+    position: absolute;
+    font-family: "Myriad Pro Condensed";
+    font-weight: 100;
+    font-size: 3em;
+    color: #36cdfc;
+    text-shadow: #36cdfc33 0px 7px 0px;
+}
+
+.boxcontent > .pgrp{
+    margin-left: 3%;
+    position: absolute;
+    top: 30%;
+    font-family: "Myriad Pro";
+    font-weight: 300;
+    color: white;
+    text-shadow: #000000 0px 4px 0px;
+}
+
+.pgrp > p:nth-child(1){
+    margin-bottom: 10%;
+}
+
+.line{
+    position: absolute;
+    top: 25%;
+    left: -1%;
+}
+
+.optgroup{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 45%;
+    left: 4%;
+}
+
+.opt{
+    transition: transform 0.3s ease-out;
+    display: flex;
+    margin-bottom: 1%;
+    width: 48%;
+    height: 13.2%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-image-source:linear-gradient(90deg, rgba(10,156,255,1) 0%, rgba(10,156,255,0) 66%);
+    border-image-slice: 1;
+    background: linear-gradient(48deg, #00204ab8 0%, #0019298c 28%, #00264000 83%);
+}
+
+.opt > .border{
+    transition: background-color 0.3s linear;
+    position: relative;
+    left: -1%;
+    height: 100%;
+    width: 2px;
+    background-color: #0e78b0;
+}
+
+.opt.active{
+    transform: translateX(3.3%);
+    background: linear-gradient(90deg, #0b6393f0 0%, #0198ff00 88%);    
+}
+
+.opt.active > .border{
+    background-color: white;
+}
+
+.opt.sel{
+    transform: translateX(3.3%);
+    background: linear-gradient(90deg, #0b6393f0 0%, #0198ff00 88%);    
+}
+
+.opt.sel > .border{
+    background-color: green;
+}
+
+.opt > p{
+    align-self: center;
+    color: white;
+    font-family: "Myriad Pro";
+    font-size: 1.1em;
+    margin: 0;
+    margin-left: 1.5%;
+    text-shadow: 0px 4px 1px #0000004f;
+}
+
+.logo{
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    width: 26%;
+}
+
+.charopt{
+    height: 20%;
+    background: url("c1.png") 19% 56%, linear-gradient(48deg, #00204ab8 0%, #0019298c 28%, #00264000 83%);
+}
+
+.charopt.active{
+    background: url("c1.png") 19% 56%, linear-gradient(90deg, #0b6393f0 0%, #0198ff00 88%);    
+}

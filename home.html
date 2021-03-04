@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(()=>{
+
+            $(".opt").hover(function(){
+                $(this).addClass("active");
+                $("#audio").attr("src", "sel.mp3");
+                $("#audio")[0].play();
+            }, function(){
+                $(this).removeClass("active");
+            })
+
+            $("#opt1").click(()=>{
+                $(".boxcontent").hide("slow", function(){
+                    $.ajax({url: "charsel.html", success: function(result){
+                    $(".boxcontent").html(result);
+                    $(".boxcontent").show("slow");
+                    }
+                });
+            })
+        })
+    })
+    </script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <audio src="" id="audio"></audio>
+    <iframe src="prelude.mp3" loop allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe> 
+    <img src="logo.png" alt="" class="logo">
+    <div class="optbox">
+        <h2>FFVII: BIMIP</h2>
+        <img src="line.png" alt="" class="line">
+        <div class="boxcontent">
+        <div class="pgrp">
+            <p class="desc">Welcome to <br> Final Fantasy VII: But It's Made In PHP !</p>
+            <p class="desc">Please select an option to begin.</p>
+        </div>
+        <div class="optgroup">
+            <div class="opt" id="opt1">
+                <div class="border"></div>
+                <p>Play</p>
+            </div>
+            <div class="opt" id="opt2">
+                <div class="border"></div>
+                <p>Manage Characters</p>
+            </div>
+            <div class="opt" id="opt3">
+                <div class="border"></div>
+                <p>About</p>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

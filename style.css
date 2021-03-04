@@ -1,0 +1,158 @@
+       body{
+            background-image: url("back.jpg");
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .currplayer{
+            position: absolute;
+            bottom: 2%;
+            left: 4%;
+        }
+
+        .cinfo{
+            margin-top: 6%;
+            display: block;
+            position: relative;
+        }
+
+        .c1grp > img, .c2grp > img{
+            width: 100%;
+        }
+
+        .cinfo > img{
+            width: 100%;
+        }
+
+        .c1grp, .c2grp{
+            display: inline-block;
+            width: 25%;
+            position: absolute;
+
+        }
+
+        .c1grp{
+            bottom: 4%;
+            left: 2%;
+        }
+
+        .c2grp{
+            top: 4%;
+            right: 2%;
+        }
+
+        .cname{
+            float: left;
+            position: absolute;
+            bottom: 60%;
+            left: 4%;
+            color: #36cdfc;
+        }
+
+        .chp{
+            float: right;
+            position: absolute;
+            right: 6%;
+            top: 50%;
+        }
+
+        p{
+            font-family: "Myriad Pro Condensed";
+            font-weight: 300;
+            font-size: 2.5em;
+            color: white;
+            margin: 0;
+        }
+
+        .cmdbox{
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            width: 28.6%;
+            height: 32.6%;
+            background-image: url(cmd.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+    .optgroup{
+        position: absolute;
+        top: 21%;
+        width: 100%;
+        height: 51%;
+        left: 3%;
+    }
+
+    .opt{
+        transition: transform 0.3s ease-out;
+        display: flex;
+        margin-bottom: 1%;
+        width: 58%;
+        height: 30.2%;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-image-source:linear-gradient(90deg, rgba(10,156,255,1) 0%, rgba(10,156,255,0) 66%);
+        border-image-slice: 1;
+        background: linear-gradient(48deg, #00204ab8 0%, #0019298c 28%, #00264000 83%);
+    }
+
+    .opt > .border{
+        transition: background-color 0.3s linear;
+        position: relative;
+        left: -1%;
+        height: 100%;
+        width: 2px;
+        background-color: #0e78b0;
+    }
+
+    .opt.active{
+        transform: translateX(3.3%);
+        background: linear-gradient(90deg, #0b6393f0 0%, #0198ff00 88%);    
+    }
+
+    #optmag{
+        background: linear-gradient(
+        48deg
+        , #000000 0%, #000000 28%, #00000000 83%);
+            opacity: 0.5;
+    }
+
+    #optmag.active{
+        background: linear-gradient(48deg, #040b14b8 0%, #00121d8c 28%, #00264000 83%);
+    }
+
+    .opt.active > .border{
+        background-color: white;
+    }
+
+    .opt > p{
+        align-self: center;
+        color: white;
+        font-family: "Myriad Pro";
+        font-size: 1.1em;
+        margin: 0;
+        margin-left: 1.5%;
+        text-shadow: 0px 4px 1px #0000004f;
+    }
+    
+    .dlgbox{
+        background-image: url(dlgbox.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 41%;
+        height: 10%;
+        left: 2%;
+        top: 2%;
+        position: absolute;
+    }
+
+    .cmd{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+    }
